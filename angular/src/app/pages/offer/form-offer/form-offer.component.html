@@ -1,0 +1,34 @@
+
+    <form [formGroup]="offerForm" (ngSubmit)="submitForm()">
+      <div class="modal-boy">
+        <div class="container">
+          <div class="form-group">
+          <label >Product: </label>  
+          <button type="button" (click)="openModel()" class="btn btn-success" style="margin-left: 10px;">
+            Select Product
+         </button>            
+          <input type="text" class="form-control" formControlName="actualProduct" readonly = "true"/>    
+                                
+          </div>                
+          <div class="form-group">
+            <label for="url">Url</label>
+            <input type="text" class="form-control" formControlName="url" />
+          </div>    
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" formControlName="price" />
+          </div>             
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">
+          Submit Form
+        </button>
+        <button type="button" (click)="closeForm()" class="btn btn-success">
+          Close
+        </button>
+        <button type="button" (click)="delete()" class="btn btn-success">
+          Delete
+        </button>       
+      </div>
+    </form>  

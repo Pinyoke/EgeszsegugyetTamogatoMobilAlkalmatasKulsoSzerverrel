@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h4 class="modal-title">Create</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">X
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="foodIngredientForm" (ngSubmit)="submitForm()">
+    <td>
+      <label for="type">FoodIngredient Type</label>
+    <input id="input" type="text" class="form-control" formControlName="type"/>
+    <label for="foodIngredientName">FoodIngredientName</label>
+    <input id="input" type="text" class="form-control" formControlName="foodIngredientName"/> 
+    <button type="submit" class="btn btn-success">
+      Add Food Ingredient
+    </button> 
+    
+    </td>
+  </form>
+  </div>
+  
+  
+  

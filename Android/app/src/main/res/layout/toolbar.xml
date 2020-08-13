@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Silver"
+    android:elevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/toolbarLogo"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:src="@drawable/logoka"
+
+            ></ImageView>
+
+
+        <TextView
+            android:id="@+id/logoeleje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/toolbarLogo"
+            android:text="Scan"
+            android:textSize="20sp"
+            android:elevation="3dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/logoeleje"
+            android:text="GEN"
+            android:textColor="@color/Logo"
+            android:textSize="20sp"
+            android:elevation="3dp"
+            android:textStyle="bold"></TextView>
+
+        <ImageView
+            android:id="@+id/btn_logoutToolbar"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_close_black_24dp"></ImageView>
+
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

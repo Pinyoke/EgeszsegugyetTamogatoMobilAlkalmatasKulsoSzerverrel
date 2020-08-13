@@ -1,0 +1,24 @@
+
+    <form [formGroup]="allergenForm" (ngSubmit)="submitForm()">
+      <div class="modal-boy">
+        <div class="container">
+          <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" formControlName="name" />
+          </div>                 
+                     
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">
+          Submit Form
+        </button>
+        <button type="button" (click)="closeForm()" class="btn btn-success">
+          Close
+        </button>
+        <button type="button" (click)="delete()" class="btn btn-success">
+          Delete
+        </button>       
+      </div>
+    </form>  
+ 

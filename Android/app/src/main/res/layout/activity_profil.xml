@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+
+    <ImageButton
+        android:id="@+id/modifyProfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentRight="true"
+        android:background="@color/White"
+        android:layout_margin="20px"
+        android:src="@drawable/ic_profiledit" />
+
+    <ImageButton
+        android:id="@+id/closeModify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentRight="true"
+        android:background="@color/White"
+        android:layout_margin="20px"
+        android:src="@drawable/ic_close_black_24dp"
+        android:visibility="invisible"/>
+
+    <ImageButton
+        android:id="@+id/saveProfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:layout_marginBottom="20px"
+        android:background="@color/White"
+        android:src="@drawable/ic_profilsave"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/userProfilName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:layout_below="@+id/toolbar"
+        android:text="Name:" />
+
+    <EditText
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="110dp"
+
+        android:id="@+id/userProfilNameText"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/userProfilName"
+        android:layout_marginTop="20px"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_action_username"
+        android:hint="Name"
+        android:paddingLeft="2dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/userProfilEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/userProfilNameText"
+        android:text="Email::" />
+
+    <EditText
+        android:id="@+id/userProfilNameEmail"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="110dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/userProfilEmail"
+        android:layout_marginTop="20px"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_action_email"
+        android:hint="Email"
+        android:paddingLeft="2dp"
+
+        />
+
+    <TextView
+        android:id="@+id/userProfilPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/userProfilNameEmail"
+        android:text="Password:"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="110dp"
+        android:id="@+id/userProfilNamePassword"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/userProfilPassword"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_action_password"
+        android:layout_marginTop="20px"
+        android:hint="Password"
+        android:paddingLeft="2dp"
+        android:visibility="invisible"
+
+        />
+
+
+    <TextView
+        android:id="@+id/sensitivityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="10dp"
+        android:textSize="15dp"
+        android:layout_below="@+id/userProfilNamePassword"
+        android:text="Sensitivitys:" />
+
+    <ImageButton
+        android:id="@+id/addSensitivityButtonId"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:layout_below="@+id/userProfilNamePassword"
+        android:layout_toRightOf="@+id/sensitivityLabel"
+        android:background="@color/White"
+        android:layout_marginTop="45px"
+        android:layout_marginLeft="20px"
+        android:src="@drawable/profile_vector_add_button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scrollbars="vertical"
+        android:id="@+id/sensitivityList"
+        android:layout_below="@+id/sensitivityLabel"
+        android:layout_marginTop="30px">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@drawable/botton_navigation_item_colors"
+        app:itemTextColor="@drawable/botton_navigation_item_colors"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemBackground="@color/White"
+        />
+
+
+</RelativeLayout>

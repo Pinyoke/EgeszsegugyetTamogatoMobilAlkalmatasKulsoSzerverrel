@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Result"
+        android:id="@+id/navigationResultId"
+        android:icon="@drawable/menu_vector_result"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
+
+    <item android:title="Scan"
+        android:id="@+id/navigationScanId"
+        android:icon="@drawable/menu_vector_camera"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
+
+
+
+    <item android:title="Profil"
+        android:id="@+id/navigationProfilId"
+        android:icon="@drawable/menu_vector_profil"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
+
+
+</menu>

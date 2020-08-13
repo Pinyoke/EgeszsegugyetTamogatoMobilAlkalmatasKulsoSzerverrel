@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BarCodeActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/barcodeLinear"
+        android:orientation="horizontal"
+        android:layout_marginTop="750px"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/barcode"
+            android:layout_width="235dp"
+            android:layout_height="50dp"
+android:gravity="center"
+            android:background="@drawable/border"
+            android:hint="Barcode"
+            android:paddingLeft="2dp"
+            />
+
+    <ImageButton
+        android:id="@+id/openCameraButton"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_toRightOf="@+id/barcode"
+        android:background="@drawable/border"
+        android:layout_marginLeft="10px"
+        android:src="@drawable/menu_vector_camera" />
+
+
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/searchBarCodeButton"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_below="@+id/barcodeLinear"
+       android:layout_centerHorizontal="true"
+        android:background="@drawable/border"
+        android:layout_marginTop="10px"
+        android:src="@drawable/ic_search_black_24dp" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@drawable/botton_navigation_item_colors"
+        app:itemTextColor="@drawable/botton_navigation_item_colors"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemBackground="@color/White"
+        />
+
+</RelativeLayout>

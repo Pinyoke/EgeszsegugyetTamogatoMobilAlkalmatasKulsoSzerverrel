@@ -1,0 +1,12 @@
+#input{
+    width: 300px;
+}
+
+#image{
+    display: block;
+    position: absolute;
+    top: -60%;
+    right: 20%;
+    width: 300px;
+}
+

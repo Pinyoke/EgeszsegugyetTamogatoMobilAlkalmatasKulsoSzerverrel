@@ -1,0 +1,50 @@
+
+<td><button class="btn" (click) ="openCreateFormModal()" >Create</button></td>
+<td><div class="input-group no-border">
+  <input type="text" class="form-control" (keyup)="search($event)" placeholder="Search...">
+  <div class="input-group-append">
+    <div class="input-group-text">
+      <i class="nc-icon nc-zoom-split"></i>
+    </div>
+  </div>
+  </div>
+</td>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title"> Allergens:</h4>
+      </div>
+      <div class="card-body">
+		<div class="table-responsive">
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">name</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let allergen of allergens ; index as i">
+      <td>{{allergen.id}}</td>
+      <td>{{allergen.name}}</td>
+      <td><button (click) = deleteAllergen(allergen.id) class="btn">X</button></td>
+      <td><button class="btn" (click)="openEditFormModal(allergen)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+<ul class="nav nav-pills">
+  <li class="nav-item" *ngFor="let p of pages; let i = index">
+      <a class="nav-link" (click)="setPage(i,$event)">{{i}}</a>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+

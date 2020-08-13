@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ResultActivity">
+
+    <include
+        android:id="@+id/toolbarka"
+        layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@+id/toolbarka">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/resultImage"
+      />
+
+    <TextView
+        android:id="@+id/resultMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/resultImage"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        android:text="RESULT" />
+
+
+        <TextView
+            android:id="@+id/ingredientsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px"
+            android:layout_below="@+id/resultMessage"
+            android:textStyle="bold"
+            android:text="Ingredients:" />
+
+        <TextView
+            android:id="@+id/ingredientsList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:layout_below="@+id/ingredientsLabel"
+            android:text="list" />
+
+        <TextView
+            android:id="@+id/offersLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px"
+            android:layout_below="@+id/ingredientsList"
+            android:text="Offers:"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:id="@+id/offerList"
+            android:layout_below="@+id/offersLabel"
+            android:layout_marginTop="30px">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@drawable/botton_navigation_item_colors"
+        app:itemTextColor="@drawable/botton_navigation_item_colors"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemBackground="@color/White"
+        />
+
+</RelativeLayout>

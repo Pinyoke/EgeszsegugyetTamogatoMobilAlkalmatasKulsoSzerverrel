@@ -1,0 +1,55 @@
+<div class="modal-header">
+    <h4 class="modal-title">Select Product</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">X
+    </button>
+  </div>
+  <div class="modal-body">
+  <td><div class="input-group no-border">
+    <input type="text" class="form-control" (keyup)="search($event)" placeholder="Search...">
+    <div class="input-group-append">
+      <div class="input-group-text">
+        <i class="nc-icon nc-zoom-split"></i>
+      </div>
+    </div>
+    </div>
+  </td>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Simple Table</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">name</th>
+        <th scope="col">Gtin13</th>
+        <th scope="col">Add</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products ; index as i">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.gtin13}}</td>
+        <td><button class="btn" (click)="add(product)">Add</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <ul class="nav nav-pills">
+    <li class="nav-item" *ngFor="let p of pages; let i = index">
+        <a class="nav-link" (click)="setPage(i,$event)">{{i}}</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+  

@@ -1,0 +1,55 @@
+
+    <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+      <div class="modal-boy">
+        <div class="container">
+          <div *ngIf="user.id != null" class="form-group">
+          <label >Role: </label>    
+          <select style="margin-left: 10px;" (change)="selectRoleChangeHandler($event)">
+            <option>Select New Role</option>
+            <option *ngFor="let role of roles" [ngValue]="role">{{role.role}}</option>
+          </select>          
+          <input type="text" class="form-control" formControlName="actualrole" />    
+                           
+          </div>  
+          <div *ngIf="user.id != null && user.role.role == 'ROLE_SELLERADMIN'" class="form-group">
+            <label >Seller Name: </label>  
+             <button type="button" style="margin-left: 10px;" (click)="openModel()" class="btn btn-success">
+              Select Seller
+          </button>              
+            <input type="text" readonly="true" class="form-control" formControlName="actualSeller" />       
+                 
+            </div>        
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" formControlName="name" />
+          </div> 
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" formControlName="email" />
+          </div> 
+          <div class="form-group">
+          
+            <!-- Default switch -->
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitches" (change)="editPassword()">
+  <label class="custom-control-label" for="customSwitches">Modify Password</label>
+</div>
+            
+            <input type="password" *ngIf="modifyPassword" class="form-control" formControlName="password" />
+          </div> 
+           
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">
+          Submit Form
+        </button>
+        <button type="button" (click)="closeForm()" class="btn btn-success">
+          Close
+        </button>
+        <button type="button" (click)="delete()" class="btn btn-success">
+          Delete
+        </button>       
+      </div>
+    </form>  
+ 

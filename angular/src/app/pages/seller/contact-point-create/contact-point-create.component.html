@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h4 class="modal-title">Create</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">X
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="contactPointForm" (ngSubmit)="submitForm()">
+    <td>
+        <label for="areaServed">AreaServed</label>
+        <input type="text" class="form-control" formControlName="areaServed" />         
+        <label for="foodIngredientName">Telephone</label>
+        <input type="type" class="form-control" formControlName="telephone" />   
+        <label for="foodIngredientName">AvailableLanguage</label>
+        <input type="type" class="form-control" formControlName="availableLanguage" />  
+        <button type="submit"  class="btn btn-success">
+            Add new contactPoint
+        </button> 
+    
+    </td>
+  </form>
+  </div>
+  
+  
+  
